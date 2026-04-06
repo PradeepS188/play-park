@@ -1,16 +1,48 @@
 package com.playpark.person_register.dto;
 
 import com.playpark.person_register.entity.Person;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.LocalDate;
 
+@Schema(
+        name = "Persons",
+        description = "It will hold person details"
+)
 public class PersonDto {
+    @Schema(
+            name = "Personal Number",
+            description = "It will hold person no",
+            example = "199810188517"
+    )
     Long personalNo;
+    @Schema(
+            description = "It will hold person name",
+            example = "Pradeep"
+    )
     String name;
+    @Schema(
+            description = "It will hold person age",
+            example = "28"
+    )
     String age;
+    @Schema(
+            description = "It will hold person dob",
+            example = "1999-10-18"
+    )
     LocalDate dateOfBirth;
+    @Schema(
+            description = "It will hold person gender",
+            example = "Male"
+    )
     String gender;
+    @Schema(
+            description = "It will hold person age group"
+    )
     String ageGroup;
+    @Schema(
+            description = "It will hold person community details"
+    )
     CommunityDetailsDto communityDetails;
 
     public PersonDto() {
